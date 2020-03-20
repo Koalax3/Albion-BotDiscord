@@ -1,0 +1,29 @@
+{
+  "name": "albion-botdiscord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koalax3/Albion-BotDiscord.git"
+  },
+  "author": "lucasDepret",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Koalax3/Albion-BotDiscord/issues"
+  },
+  "homepage": "https://github.com/Koalax3/Albion-BotDiscord#readme",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "cheerio": "^1.0.0-rc.3",
+    "discord.js": "^12.0.2",
+    "ffmpeg-static": "^4.0.1",
+    "libsodium-wrappers": "^0.7.6",
+    "opusscript": "0.0.7",
+    "utf-8-validate": "^5.0.2"
+  }
+}

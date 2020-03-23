@@ -6,7 +6,7 @@ module.exports = class Albion{
     static parse(msg){
         const cmd = msg.content.split(' ');
         console.log(cmd);
-        if (cmd[0] == "!rank"&& cmd.length > 1)
+        if (cmd[0] == "!rank" && cmd.length > 1)
             msg.channel.send(this.infoRank(cmd[1], cmd[2]));
     }
 
@@ -31,7 +31,7 @@ module.exports = class Albion{
                     $(players).children().each((z, player) =>{
                         infos.push($(player).text());
                     });
-                    paddium += this.rank[y]+infos[1]+' '+infos[2]+'\n';
+                    paddium += rank[y]+infos[1]+' '+infos[2]+'\n';
                 }
                 })
                 console.log(paddium);

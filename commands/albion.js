@@ -22,6 +22,7 @@ module.exports = class Albion{
     }
     const rank = [':trophy: ', ':second_place: ', ':third_place: ',':yellow_square: ',":white_square:",
             ":brown_square: ", ':yellow_circle: ', ':white_circle: ', ':brown_circle: ', ':poop: '];
+    return new Promise(resolve => {
     request('https://www.albiononline2d.com/en/scoreboard/guilds/LvVjuhcgS1GDC60hSQo42A',(error,response,html)=>{
     if (!error && response.statusCode == 200){
         var paddium = ':military_medal: '+ command[article]+ ' :military_medal:\n';
@@ -38,11 +39,11 @@ module.exports = class Albion{
                 }
                 })
                 console.log(paddium);
-                return paddium;
+                revolve(paddium);
             }
         })
     }
-    return "Nop! Sorry"
-})
+    revolve("Nop! Sorry");
+})});
 }
 }

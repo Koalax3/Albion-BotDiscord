@@ -1,14 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const kaamelot = require('./commands/kaamelot');
+const albion = require('./commands/albion');
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
+  kaamelot.common(msg);
+  albion.parse(msg);
 });
 
-client.login('NjkwNTQ4NzAxODE0MzI1MjQ4.XnUMQQ.pqfGMW1bQp6XNY2MsQfBY6vh-Ac');
+client.login(process.env.BOT_TOKEN);

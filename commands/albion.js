@@ -39,11 +39,11 @@ module.exports = class Albion{
                 }
                 })
                 console.log(paddium);
-                revolve(paddium);
+                resolve(paddium);
             }
         })
     }
-    revolve("Nop! Sorry");
+    resolve("Nop! Sorry");
 })});
 }
 }

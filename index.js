@@ -12,6 +12,9 @@ client.on('message', msg => {
   if (msg.content === 'arthour') {
     msg.reply('cuillièèère!');
   }
+  if (msg.channel === 'général') {
+    msg.reply("c'est pas faux"{file:'https://i.giphy.com/media/XknChYwfPnp04/giphy.webp'});
+  }
 });
 
 client.login(process.env.BOT_TOKEN);

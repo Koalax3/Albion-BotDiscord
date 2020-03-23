@@ -6,7 +6,6 @@ module.exports = class Kaamelot {
           if (msg.content === 'arthour') {
             msg.reply('cuillièèère!');
           }
-          console.log(msg.member);
           if (msg.channel.name === 'général' && !msg.member.user.bot && Math.floor(Math.random() * 11) == 4) {
             msg.channel.send("",{files:['https://i.giphy.com/XknChYwfPnp04.gif']});
           }

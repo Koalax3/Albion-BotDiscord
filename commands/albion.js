@@ -16,7 +16,7 @@ module.exports = class Albion{
         const cmd = msg.content.split(' ');
         console.log(cmd);
         if (cmd[0] == "!rank"&& cmd.length > 1)
-            msg.channel.send(infoRank(cmd[1], cmd[2]));
+            msg.channel.send(this.infoRank(cmd[1], cmd[2]));
     }
 
  static infoRank(article, head = 5){ 

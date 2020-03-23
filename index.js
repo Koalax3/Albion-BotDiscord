@@ -14,7 +14,7 @@ client.on('message', msg => {
   }
   console.log(msg.member);
   if (msg.channel.name === 'général' && !msg.member.user.bot) {
-    msg.channel.send("c'est pas faux",{files:['https://i.giphy.com/media/XknChYwfPnp04/giphy.webp']});
+    msg.channel.send("c'est pas faux",{files:['https://i.giphy.com/XknChYwfPnp04.gif']});
   }
 });
 

@@ -12,11 +12,12 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
   if (msg.content === 'arthour') {
-    msg.reply('Cuillèèère !');
+    msg.reply('cuillièèère!');
   }
-  if (msg.channel === "général"){
-      msg.reply({files:["https://media1.tenor.com/images/9e2fd8f6f208f6e34a01038859a10b0b/tenor.gif"]})
+  console.log(msg.member);
+  if (msg.channel.name === 'général' && !msg.member.user.bot && Math.floor(Math.random() * 11) == 4) {
+    msg.channel.send("c'est pas faux",{files:['https://i.giphy.com/XknChYwfPnp04.gif']});
   }
 });
 
-client.login('NjkwNTQ4NzAxODE0MzI1MjQ4.XnUMQQ.pqfGMW1bQp6XNY2MsQfBY6vh-Ac');
+client.login(process.env.BOT_TOKEN);

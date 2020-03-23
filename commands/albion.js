@@ -22,17 +22,17 @@ module.exports = class Albion{
  static infoRank(article, head = 5){ 
     request('https://www.albiononline2d.com/en/scoreboard/guilds/LvVjuhcgS1GDC60hSQo42A',(error,response,html)=>{
     if (!error && response.statusCode == 200){
-        var paddium = ':military_medal: '+ command[article]+ ' :military_medal:';
+        var paddium = ':military_medal: '+ this.command[article]+ ' :military_medal:';
         const $ = cheerio.load(html);
         titleTable= $(".card").each((i, card) =>{
-            if($(card).find('.card-header').text() == command[article]){
+            if($(card).find('.card-header').text() == this.command[article]){
                 $(card).find('tbody').children().each((y, players) =>{
                     var infos = []
                     if (y <= head){
                     $(players).children().each((z, player) =>{
                         infos.push($(player).text());
                     });
-                    paddium += rank[y]+infos[1]+' '+infos[2]+'\n';
+                    paddium += this.rank[y]+infos[1]+' '+infos[2]+'\n';
                 }
                 })
                 console.log(paddium);

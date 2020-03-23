@@ -24,6 +24,7 @@
     "ffmpeg-static": "^4.0.1",
     "libsodium-wrappers": "^0.7.6",
     "opusscript": "0.0.7",
-    "utf-8-validate": "^5.0.2"
+    "utf-8-validate": "^5.0.2",
+    "request": "^2.88.2"
   }
 }

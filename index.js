@@ -13,7 +13,7 @@ client.on('message', msg => {
     msg.reply('cuillièèère!');
   }
   console.log(msg.member);
-  if (msg.channel.name === 'général' && !msg.member.user.bot) {
+  if (msg.channel.name === 'général' && !msg.member.user.bot && Math.floor(Math.random() * 6) == 4) {
     msg.channel.send("c'est pas faux",{files:['https://i.giphy.com/XknChYwfPnp04.gif']});
   }
 });

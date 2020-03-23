@@ -6,8 +6,11 @@ module.exports = class Albion{
     static parse(msg){
         const cmd = msg.content.split(' ');
         console.log(cmd);
-        if (cmd[0] == "!rank" && cmd.length > 1)
-            msg.channel.send(this.infoRank(cmd[1], cmd[2]));
+        if (cmd[0] == "!rank" && cmd.length > 1){
+            const result = this.infoRank(cmd[1], cmd[2]);
+            console.log(result);
+            msg.channel.send(result);
+        }
     }
 
  static infoRank(article, head = 5){ 
@@ -21,7 +24,7 @@ module.exports = class Albion{
             ":brown_square: ", ':yellow_circle: ', ':white_circle: ', ':brown_circle: ', ':poop: '];
     request('https://www.albiononline2d.com/en/scoreboard/guilds/LvVjuhcgS1GDC60hSQo42A',(error,response,html)=>{
     if (!error && response.statusCode == 200){
-        var paddium = ':military_medal: '+ command[article]+ ' :military_medal:';
+        var paddium = ':military_medal: '+ command[article]+ ' :military_medal:\n';
         const $ = cheerio.load(html);
         $(".card").each((i, card) =>{
             if($(card).find('.card-header').text() == command[article]){
@@ -38,9 +41,8 @@ module.exports = class Albion{
                 return paddium;
             }
         })
-    }else{
-        return "Nop! Sorry"
     }
+    return "Nop! Sorry"
 })
 }
 }

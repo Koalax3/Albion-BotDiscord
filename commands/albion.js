@@ -14,7 +14,8 @@ module.exports = class Albion{
 
     static parse(msg){
         const cmd = msg.content.split(' ');
-        if (cmd[0] == "!rank"&& cmd.lenght > 1)
+        console
+        if (cmd[0] == "!rank"&& cmd.length > 1)
             msg.channel.send(infoRank(cmd[1], cmd[2]));
     }
 

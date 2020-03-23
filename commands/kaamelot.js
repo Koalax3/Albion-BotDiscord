@@ -8,7 +8,7 @@ module.exports = class Kaamelot {
           }
           console.log(msg.member);
           if (msg.channel.name === 'général' && !msg.member.user.bot && Math.floor(Math.random() * 11) == 4) {
-            msg.channel.send("c'est pas faux",{files:['https://i.giphy.com/XknChYwfPnp04.gif']});
+            msg.channel.send("",{files:['https://i.giphy.com/XknChYwfPnp04.gif']});
           }
     }
 

@@ -3,17 +3,17 @@ const cheerio = require('cheerio');
 
 module.exports = class Albion{
 
-    static parse(msg){
+    async parse(msg) {
         const cmd = msg.content.split(' ');
         console.log(cmd);
         if (cmd[0] == "!rank" && cmd.length > 1){
-            const result = this.infoRank(cmd[1], cmd[2]);
+            const result = await this.infoRank(cmd[1], cmd[2]);
             console.log(result);
             msg.channel.send(result);
         }
     }
 
- static infoRank(article, head = 5){ 
+ static infoRank(article, head = 5) { 
      const command = {
         'pvp':'Top PvP Fame, This Month',
         'pve':'Top PvE Fame, This Month',

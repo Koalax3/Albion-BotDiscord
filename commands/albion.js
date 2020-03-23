@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 
 module.exports = class Albion{
 
-    async parse(msg) {
+    static async parse(msg) {
         const cmd = msg.content.split(' ');
         console.log(cmd);
         if (cmd[0] == "!rank" && cmd.length > 1){

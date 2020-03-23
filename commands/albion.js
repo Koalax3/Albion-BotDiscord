@@ -20,7 +20,7 @@ module.exports = class Albion{
         'gathering':'Top Gathering Fame, This Month',
         'crafting': 'Top Crafting Fame, This Month'
     }
-    const rank = [':trophy: ', ':second_place: ', ':third_place: ',':yellow_square: ',":white_square:",
+    const rank = [':trophy: ', ':second_place: ', ':third_place: ',':yellow_square: ',":white_large_square:",
             ":brown_square: ", ':yellow_circle: ', ':white_circle: ', ':brown_circle: ', ':poop: '];
     return new Promise(resolve => {
     request('https://www.albiononline2d.com/en/scoreboard/guilds/LvVjuhcgS1GDC60hSQo42A',(error,response,html)=>{
@@ -31,7 +31,7 @@ module.exports = class Albion{
             if($(card).find('.card-header').text() == command[article]){
                 $(card).find('tbody').children().each((y, players) =>{
                     var infos = []
-                    if (y <= head){
+                    if (y < head){
                     $(players).children().each((z, player) =>{
                         infos.push($(player).text());
                     });

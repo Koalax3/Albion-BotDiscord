@@ -12,7 +12,7 @@ client.on('message', msg => {
   if (msg.content === 'arthour') {
     msg.reply('cuillièèère!');
   }
-  console.log(msg.channel);
+  console.log(msg.member);
   if (msg.channel.name === 'général') {
     msg.channel.send("c'est pas faux",{files:['https://i.giphy.com/media/XknChYwfPnp04/giphy.webp']});
   }
